@@ -1,6 +1,6 @@
 import { request } from "graphql-request";
 import { useQuery } from "@tanstack/react-query";
-import { allCharacters } from "../queries/getAllCharacters"; // Import af GraphQL-query
+import { allCharacters } from "../queries/getAllCharacters";
 
 export const Character = () => {
   const { data, isLoading, error } = useQuery({
