@@ -1,0 +1,76 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    height: 50vh;
+    overflow: hidden;
+    background: radial-gradient(circle, #000000, #000000);
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('../../assets/images/star-wars.jpg') center center/contain no-repeat; 
+      opacity: 0.8; 
+      z-index: 0;
+      animation: zoomIn 10s infinite ease-in-out alternate; 
+    }
+    
+    @media (min-width: 768px) {
+      padding: 40px 60px;
+    }
+  }
+  
+  .headerImage {
+    display: none;
+  }
+  
+  .title {
+    color: #fff;
+    font-size: 2.5rem;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    z-index: 1; 
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    animation: fadeIn 1.5s ease-in-out, moveUpDown 3s infinite ease-in-out; /* Text animation */
+    
+    @media (min-width: 768px) {
+      font-size: 3.5rem;
+    }
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes moveUpDown {
+    0%, 100% {
+      transform: translateY(-10px);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+  }
+  
