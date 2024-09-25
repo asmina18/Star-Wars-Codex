@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import {QueryClientProvider, QueryClient} from '@tanstack/react-query'
 import { MainLayout } from "./layout/MainLayout.jsx"

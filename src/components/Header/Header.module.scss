@@ -4,11 +4,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 5px 0;
     position: relative;
     height: 50vh;
     overflow: hidden;
-    background: radial-gradient(circle, #000000, #000000);
+    background: linear-gradient(90deg,  #000000, #500b0bcd, #000000);
   
     &::before {
       content: "";
