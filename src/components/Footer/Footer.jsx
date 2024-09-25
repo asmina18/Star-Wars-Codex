@@ -1,8 +1,17 @@
+import styles from './Footer.module.scss';
 
-export  function Footer() {
+export const Footer = () => {
   return (
-    <footer>
+    <footer className={styles.footer}>
+      <div className={styles.footerContent}>
+        <p>
+          Crafted by <strong>Amina</strong>, <strong>Makka</strong>
+        </p>
+        <p>
+          <a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a>
+        </p>
+      </div>
+    </footer>
+  );
+};
 
-</footer>
-  )
-}
