@@ -2,6 +2,7 @@ import { request } from "graphql-request";
 import { useQuery } from "@tanstack/react-query";
 import { allFilms } from "../queries/getAllFilms";
 import { Link } from "react-router-dom";
+import { BackToTop } from "../components/BackToTop/BackToTop";
 
 export const Films = () => {
   const { data, isLoading, error } = useQuery({
@@ -30,6 +31,7 @@ export const Films = () => {
           return (
             <li key={item.id}>
               <Link to={`home/${item.id}`}>{item.title}</Link>
+              <BackToTop/>
             </li>
           );
         })}

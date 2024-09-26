@@ -40,7 +40,7 @@
     z-index: 1; 
     letter-spacing: 3px;
     text-transform: uppercase;
-    animation: fadeIn 1.5s ease-in-out, moveUpDown 3s infinite ease-in-out; /* Text animation */
+    animation: fadeIn 1.5s ease-in-out, moveUpDown 3s infinite ease-in-out;
     
     @media (min-width: 768px) {
       font-size: 3.5rem;

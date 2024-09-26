@@ -1,6 +1,7 @@
 import { request } from "graphql-request";
 import { useQuery } from "@tanstack/react-query";
 import { allCharacters } from "../queries/getAllCharacters"; // Import af GraphQL-query
+import { BackToTop } from "../components/BackToTop/BackToTop";
 
 export const Character = () => {
   const { data, isLoading, error } = useQuery({
@@ -23,6 +24,7 @@ export const Character = () => {
   return (
     <div>
       <h1>Star Wars Characters</h1>
+      <BackToTop/>
       <ul>
         {data.allPeople.people.map((person) => (
           <li key={person.id}>
