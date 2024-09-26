@@ -8,7 +8,8 @@
     position: relative;
     height: 50vh;
     overflow: hidden;
-    background: linear-gradient(90deg,  #000000, #500b0bcd, #000000);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); 
+    background-color: #2b2b2b;
   
     &::before {
       content: "";
@@ -20,7 +21,7 @@
       background: url('../../assets/images/star-wars.jpg') center center/contain no-repeat; 
       opacity: 0.8; 
       z-index: 0;
-      animation: zoomIn 10s infinite ease-in-out alternate; 
+      animation: zoomIn 40s infinite ease-in-out alternate; 
     }
     
     @media (min-width: 768px) {
