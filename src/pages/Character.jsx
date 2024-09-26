@@ -24,7 +24,7 @@ export const Character = () => {
 
   return (
     <div className={styles.characterContainer}>
-      <h1>Star Wars Characters</h1>
+      <h2>Star Wars Characters</h2>
       <BackToTop/>
       <ul>
         {data.allPeople.people.map((person) => (

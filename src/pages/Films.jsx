@@ -52,7 +52,7 @@ export const Films = () => {
 
   return (
     <div className={styles.filmsContainer}>
-      <h1 className={styles.heading}>Star Wars Films</h1>
+      <h2 className={styles.heading}>Star Wars Films</h2>
       <ul className={styles.filmList}>
         {data.allFilms.films.map((film) => (
           <li key={film.id} className={styles.filmItem}>
