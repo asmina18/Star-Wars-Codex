@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-
 .filmsContainer {
   display: flex;
   flex-direction: column;
@@ -10,7 +9,6 @@
   color: #e0e0e0;
   min-height: 30vh;
 }
-
 .heading {
   font-size: 2.5rem; 
   margin-bottom: 1.5rem; 
@@ -19,6 +17,29 @@
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1.5px; 
+}
+.searchInput {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.8rem;
+  margin-bottom: 2rem;
+  border-radius: 6px;
+  border: 1px solid #ff4400; 
+  font-size: 1rem;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #292929;  
+  color: #f4f4f4;  
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &:focus {
+    border-color: #ff9900; 
+    box-shadow: 0 0 10px rgba(255, 153, 0, 0.7); 
+  }
+
+  &::placeholder {
+    color: #e0e0e0;  
+  }
 }
 
 .filmList {
@@ -74,6 +95,7 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
   z-index: 1000;
 }
+
 .modalOverlay {
   position: fixed;
   top: 0;
@@ -83,6 +105,7 @@
   background: rgba(0, 0, 0, 0.7); 
   z-index: 999; 
 }
+
 .closeButton {
   background-color: #ff4400;
   border: none;
@@ -97,6 +120,7 @@
     background-color: #ff6600;
   }
 }
+
 .filmImageContainer {
   width: 100%;
   max-width: 200px;
@@ -128,7 +152,6 @@
   }
 }
 
-
 @media (min-width: 768px) {
   .filmsContainer {
     display: flex;
@@ -139,5 +162,19 @@
 
   .filmList {
     gap: 2rem; 
+  }
+
+  .searchInput {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .modalContent {
+    width: 90%;  
+  }
+
+  .searchInput {
+    max-width: 100%;  
   }
 }

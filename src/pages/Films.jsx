@@ -13,6 +13,7 @@ import sithImage from '../assets/images/sith-image.jpg';
 export const Films = () => {
   const [selectedFilm, setSelectedFilm] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState(""); 
 
   const { data, isLoading, error } = useQuery({
     queryKey: ["allFilms"],
@@ -42,6 +43,11 @@ export const Films = () => {
     setModalOpen(false);
   };
 
+  // Filter films based on the search query
+  const filteredFilms = data?.allFilms.films.filter((film) =>
+    film.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   if (isLoading) {
     return <div className={styles.loading}>Loading......</div>;
   }
@@ -53,8 +59,18 @@ export const Films = () => {
   return (
     <div className={styles.filmsContainer}>
       <h2 className={styles.heading}>Star Wars Films</h2>
+
+      {/* Search Input */}
+      <input
+        type="text"
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+        placeholder="Search for a film..."
+        className={styles.searchInput}
+      />
+
       <ul className={styles.filmList}>
-        {data.allFilms.films.map((film) => (
+        {filteredFilms?.map((film) => (
           <li key={film.id} className={styles.filmItem}>
             <div className={styles.filmImageContainer}>
               <img src={filmImages[film.title]} alt={film.title} className={styles.filmImage} />
@@ -65,7 +81,7 @@ export const Films = () => {
           </li>
         ))}
       </ul>
-  
+
       {/* Modal displaying film details */}
       {modalOpen && (
         <>
@@ -81,4 +97,4 @@ export const Films = () => {
       )}
     </div>
   );
-}
+};
