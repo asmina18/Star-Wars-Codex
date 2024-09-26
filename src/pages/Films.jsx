@@ -65,17 +65,20 @@ export const Films = () => {
           </li>
         ))}
       </ul>
-
+  
       {/* Modal displaying film details */}
       {modalOpen && (
-        <div className={styles.modalContent}>
-          <h2>{selectedFilm.title}</h2>
-          <p><strong>Episode:</strong> {selectedFilm.episodeID}</p>
-          <p><strong>Director:</strong> {selectedFilm.director}</p>
-          <p><strong>Opening Crawl:</strong> {selectedFilm.openingCrawl}</p>
-          <button onClick={closeModal} className={styles.closeButton}>Close Modal</button>
-        </div>
+        <>
+          <div className={styles.modalOverlay} onClick={closeModal}></div>
+          <div className={styles.modalContent}>
+            <h2>{selectedFilm.title}</h2>
+            <p><strong>Episode:</strong> {selectedFilm.episodeID}</p>
+            <p><strong>Director:</strong> {selectedFilm.director}</p>
+            <p><strong>Opening Crawl:</strong> {selectedFilm.openingCrawl}</p>
+            <button onClick={closeModal} className={styles.closeButton}>Close Modal</button>
+          </div>
+        </>
       )}
     </div>
   );
-};
+}
