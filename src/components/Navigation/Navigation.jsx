@@ -7,11 +7,11 @@ export const Navigation = () => {
     <nav className={styles.nav}>
       {navLinks.map((item) => {
         return (
-          <NavLink 
-            key={item.title} 
-            to={item.link} 
-            className={styles.navLink} 
-            activeClassName={styles.activeNavLink}
+          <NavLink
+            key={item.title}
+            to={item.link}
+            className={styles.navLink}
+           // activeClassName={styles.activeNavLink}
           >
             {item.title}
           </NavLink>
