@@ -76,7 +76,7 @@ export const Films = () => {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Star Wars" />
         <meta property="og:description"content="Star Wars er en episk fortælling om kampen mellem lyset og mørket i en fjern galakse."/>
-        <meta property="og:image"content="https://opengraph.b-cdn.net/production/images/871626bc-c374-40e1-a50d-f2c058f391e3.jpg?token=53FpnlvuLq_ZymGfLZu47HsvBH6ab4T_MRtssAzk8Fo&height=800&width=1200&expires=33265672796"/>
+        <meta property="og:image" content="https://opengraph.b-cdn.net/production/images/097622fa-fc08-44f2-9970-e0c8ea504f46.jpg?token=R4aBS23lHiff1aLYiQYgLGO_o5awlW7V5Usqd8B-yms&height=800&width=1200&expires=33265674353" />
       </Helmet>
 
       <div className={styles.filmsContainer}>

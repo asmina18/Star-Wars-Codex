@@ -26,6 +26,7 @@ export const Character = () => {
   return (
 
     <>
+          {/* Helmet bruges til at tilføje meta-tags for bedre SEO og deling på sociale medier */}
       <Helmet>
         <meta charSet="utf-8" />
         <title>Star Wars Karakterer</title>
